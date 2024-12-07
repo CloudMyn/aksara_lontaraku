@@ -10,7 +10,7 @@ class AksaraLontara extends Model
     /** @use HasFactory<\Database\Factories\AksaraLontaraFactory> */
     use HasFactory;
 
-    protected $table = 'aksara_lontaras';
+    protected $table = 'aksara_lontara';
 
     protected $fillable = [
         'nama_aksara',

@@ -17,7 +17,19 @@ class MateriPembelajaranResource extends Resource
 {
     protected static ?string $model = MateriPembelajaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
+
+    protected static ?int $navigationSort = 1;
+
+    public static function getModelLabel(): string
+    {
+        return 'Materi Pembelajaran';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return "Manajemen Pembelajaran";
+    }
 
     public static function form(Form $form): Form
     {

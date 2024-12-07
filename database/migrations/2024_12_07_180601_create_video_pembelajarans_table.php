@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('video_pembelajarans', function (Blueprint $table) {
+        Schema::create('video_pembelajaran', function (Blueprint $table) {
             $table->id();
             $table->string('judul', 255);
             $table->string('slug', 255)->unique();
             $table->text('deskripsi');
-            $table->string('video_url', 255);
+            $table->string('video', 255);
             $table->timestamps();
         });
     }

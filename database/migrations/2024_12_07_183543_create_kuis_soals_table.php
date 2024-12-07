@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kuis_soals', function (Blueprint $table) {
+        Schema::create('kuis_soal', function (Blueprint $table) {
             $table->id();
             $table->string('soal', 255);
             $table->string('pilihan_a', 255);
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('pilihan_d', 255);
             $table->string('jawaban', 255);
             $table->integer('nilai')->default(2);
-            $table->foreignId('video_pembelajaran_id')->constrained('video_pembelajarans')->cascadeOnDelete();
+            $table->foreignId('video_pembelajaran_id')->constrained('video_pembelajaran')->cascadeOnDelete();
             $table->timestamps();
         });
     }

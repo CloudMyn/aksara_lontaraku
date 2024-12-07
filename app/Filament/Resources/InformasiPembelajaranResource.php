@@ -17,7 +17,19 @@ class InformasiPembelajaranResource extends Resource
 {
     protected static ?string $model = InformasiPembelajaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-check';
+
+    protected static ?int $navigationSort = 2;
+
+    public static function getModelLabel(): string
+    {
+        return 'Informasi Pembelajaran';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return "Manajemen Pembelajaran";
+    }
 
     public static function form(Form $form): Form
     {

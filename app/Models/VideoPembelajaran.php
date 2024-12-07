@@ -9,4 +9,13 @@ class VideoPembelajaran extends Model
 {
     /** @use HasFactory<\Database\Factories\VideoPembelajaranFactory> */
     use HasFactory;
+
+    protected $table = 'video_pembelajaran';
+
+    protected $fillable = [
+        'judul',
+        'slug',
+        'deskripsi',
+        'video',
+    ];
 }

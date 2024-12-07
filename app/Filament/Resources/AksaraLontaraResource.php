@@ -17,11 +17,24 @@ class AksaraLontaraResource extends Resource
 {
     protected static ?string $model = AksaraLontara::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-table-cells';
+
+    protected static ?int $navigationSort = 3;
+
+    public static function getModelLabel(): string
+    {
+        return 'Aksara Lontara';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return "Manajemen Pembelajaran";
+    }
 
     public static function form(Form $form): Form
     {
         return $form
+            ->columns(1)
             ->schema([
                 Forms\Components\TextInput::make('nama_aksara')
                     ->required()
@@ -29,8 +42,6 @@ class AksaraLontaraResource extends Resource
                 Forms\Components\TextInput::make('kode_aksara')
                     ->required()
                     ->maxLength(10),
-                Forms\Components\TextInput::make('bunyi_aksara')
-                    ->maxLength(255),
                 Forms\Components\TextInput::make('urutan')
                     ->required()
                     ->numeric(),
@@ -44,8 +55,6 @@ class AksaraLontaraResource extends Resource
                 Tables\Columns\TextColumn::make('nama_aksara')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('kode_aksara')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('bunyi_aksara')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('urutan')
                     ->numeric()

@@ -17,7 +17,19 @@ class EvaluasiResource extends Resource
 {
     protected static ?string $model = Evaluasi::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-chart-bar';
+
+    protected static ?int $navigationSort = 4;
+
+    public static function getModelLabel(): string
+    {
+        return 'Evaluasi Siswa';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return null;
+    }
 
     public static function form(Form $form): Form
     {

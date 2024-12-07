@@ -10,7 +10,7 @@ class InformasiPembelajaran extends Model
     /** @use HasFactory<\Database\Factories\InformasiPembelajaranFactory> */
     use HasFactory;
 
-    protected $table = 'informasi_pembelajarans';
+    protected $table = 'informasi_pembelajaran';
 
     protected $fillable = [
         'gambar',

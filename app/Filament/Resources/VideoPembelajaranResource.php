@@ -17,7 +17,19 @@ class VideoPembelajaranResource extends Resource
 {
     protected static ?string $model = VideoPembelajaran::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-video-camera';
+
+    protected static ?int $navigationSort = 4;
+
+    public static function getModelLabel(): string
+    {
+        return 'Video Pembelajaran';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return "Manajemen Pembelajaran";
+    }
 
     public static function form(Form $form): Form
     {

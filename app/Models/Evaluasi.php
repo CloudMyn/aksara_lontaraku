@@ -10,7 +10,7 @@ class Evaluasi extends Model
     /** @use HasFactory<\Database\Factories\EvaluasiFactory> */
     use HasFactory;
 
-    protected $table = 'evaluasis';
+    protected $table = 'evaluasi';
 
     protected $fillable = [
         'score',

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('aksara_lontaras', function (Blueprint $table) {
+        Schema::create('aksara_lontara', function (Blueprint $table) {
             $table->id();
             $table->string('nama_aksara', 255);
             $table->string('kode_aksara', 10);

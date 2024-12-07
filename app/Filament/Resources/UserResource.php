@@ -31,7 +31,7 @@ class UserResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('app.navigation.user_management');
+        return null;
     }
 
     public static function form(Form $form): Form
@@ -54,11 +54,6 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('phone_number')
-                    ->label('Nomor Telepon')
-                    ->tel()
-                    ->maxLength(255),
-
                 Forms\Components\TextInput::make('password')
                     ->label('Kata Sandi')
                     ->password()
@@ -68,6 +63,14 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('status')
                     ->label('Status')
                     ->required(),
+
+                Forms\Components\Select::make('role')
+                    ->label('Peran Pengguna')
+                    ->required()
+                    ->options([
+                        'ADMIN' => 'ADMIN',
+                        'USER' => 'PENGGUNA',
+                    ]),
             ]);
     }
 
@@ -94,11 +97,6 @@ class UserResource extends Resource
 
                 Tables\Columns\TextColumn::make('email')
                     ->label('Alamat Email')
-                    ->toggleable(isToggledHiddenByDefault: false)
-                    ->searchable(),
-
-                Tables\Columns\TextColumn::make('phone_number')
-                    ->label('Nomor Telepon')
                     ->toggleable(isToggledHiddenByDefault: false)
                     ->searchable(),
 

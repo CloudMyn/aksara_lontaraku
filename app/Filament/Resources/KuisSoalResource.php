@@ -17,7 +17,19 @@ class KuisSoalResource extends Resource
 {
     protected static ?string $model = KuisSoal::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected static ?int $navigationSort = 5;
+
+    public static function getModelLabel(): string
+    {
+        return 'Kuis Soal';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return "Manajemen Pembelajaran";
+    }
 
     public static function form(Form $form): Form
     {
