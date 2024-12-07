@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'font-lontara';
+    src: url('../font-lontara/font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header.fi-section-header {
+    padding: 10px;
+}
+
+.font-lontara {
+    font-family: 'font-lontara';
+    font-size: 25px !important;
+}

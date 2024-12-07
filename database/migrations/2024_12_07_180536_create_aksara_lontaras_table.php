@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_aksara', 255);
             $table->string('kode_aksara', 10);
-            $table->string('bunyi_aksara', 255)->nullable();
+            $table->string('suara', 255)->nullable();
             $table->integer('urutan');
             $table->timestamps();
         });

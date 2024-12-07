@@ -6,6 +6,7 @@ use App\Filament\Resources\MateriPembelajaranResource\Pages;
 use App\Filament\Resources\MateriPembelajaranResource\RelationManagers;
 use App\Models\MateriPembelajaran;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -35,7 +36,27 @@ class MateriPembelajaranResource extends Resource
     {
         return $form
             ->schema([
-                //
+                FileUpload::make('gambar')
+                    ->label('Gambar')
+                    ->image()
+                    ->directory('materi_pembelajaran')
+                    ->columnSpanFull()
+                    ->minSize(2)
+                    ->maxSize(1024 * 5)
+                    ->required(),
+
+                Forms\Components\TextInput::make('judul')
+                    ->required()
+                    ->maxLength(255),
+
+                Forms\Components\TextInput::make('kelas')
+                    ->required()
+                    ->maxLength(255),
+
+                Forms\Components\RichEditor::make('deskripsi')
+                    ->required()
+                    ->columnSpanFull()
+                    ->maxLength(500),
             ]);
     }
 
@@ -43,13 +64,20 @@ class MateriPembelajaranResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\ImageColumn::make('gambar'),
+                Tables\Columns\TextColumn::make('judul'),
+                Tables\Columns\TextColumn::make('kelas'),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
+                    ->dateTime()
+                    ->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

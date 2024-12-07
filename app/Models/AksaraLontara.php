@@ -15,7 +15,7 @@ class AksaraLontara extends Model
     protected $fillable = [
         'nama_aksara',
         'kode_aksara',
-        'bunyi_aksara',
+        'suara',
         'urutan',
     ];
 }

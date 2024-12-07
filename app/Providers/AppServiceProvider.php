@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         FilamentAsset::register([
             // Css::make('sknor-theme', asset('build/sknor-theme.css')), // sknor theme
+            Css::make('custom-style', asset('css/custom.css')),
         ]);
 
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {

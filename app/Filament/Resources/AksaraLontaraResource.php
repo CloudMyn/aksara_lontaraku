@@ -54,16 +54,22 @@ class AksaraLontaraResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama_aksara')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('kode_aksara')
-                    ->searchable(),
+                    ->fontFamily('font-lontara'),
+
                 Tables\Columns\TextColumn::make('urutan')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: false),
+
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Diperbarui Pada')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
