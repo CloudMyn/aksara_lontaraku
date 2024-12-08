@@ -17,7 +17,11 @@ class MateriPembelajaranFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'gambar' => $this->faker->imageUrl(640, 480, 'cats'),
+            'judul' => $this->faker->sentence(6),
+            'slug' => $this->faker->unique()->slug(),
+            'kelas' => "4" . $this->faker->randomElement(['A', 'B', 'C', 'D']),
+            'deskripsi' => $this->faker->paragraphs(3, true),
         ];
     }
 }

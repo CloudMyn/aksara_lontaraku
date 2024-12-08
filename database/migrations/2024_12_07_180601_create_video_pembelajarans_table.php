@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('judul', 255);
             $table->string('slug', 255)->unique();
             $table->text('deskripsi');
-            $table->string('video', 255);
+            $table->text('video');
             $table->timestamps();
         });
     }

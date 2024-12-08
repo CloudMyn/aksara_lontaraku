@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>LearnEd</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop()) {
+				$('nav').addClass('black');
+			} else {
+				$('nav').removeClass('black');
+			}
+		})
+	</script>
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+			<ul>
+				<li><a class="active" href="">Beranda</a></li>
+				<li><a href="/pembelajaran.html" >Pembelajaran</a></li>
+				<li><a href="/tabel_aksara.html">Tabel Aksara</a></li>
+				<li><a href="/video.html">Video</a></li>
+				<li><a href="/tentang.html">Tentang</a></li>
+			</ul>
+			<a class="get-started" href="login.html">Masuk</a>
+			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		<div class="head-container">
+			<div class="quote">
+				<p>Hal yang indah tentang belajar adalah bahwa tidak ada yang dapat mengambilnya dari Anda</p>
+				<h5>Pendidikan adalah proses memfasilitasi pembelajaran, atau pengambilan pengetahuan, keterampilan,
+					nilai, keyakinan, dan kebiasaan. Metode pendidikan termasuk mengajar, melatih, bercerita, diskusi
+					dan penelitian yang dipandu!</h5>
+				<div class="play">
+					<img src="images/icon/play.png" alt="play"><span><a
+							href="https://www.youtube.com/watch?v=KFyrgDO1WXk" target="_blank">Mari Memulai</a></span>
+				</div>
+			</div>
+			<div class="svg-image">
+				<img src="images/kids-1.png" alt="svg">
+			</div>
+		</div>
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="user">
+				<img src="images/creator/roshan.jpeg" alt="Username">
+				<p>Roshan</p>
+			</div>
+			<ul>
+				<li><a class="active" href="">Beranda</a></li>
+				<li><a href="#portfolio_section">Pembelajaran</a></li>
+				<li><a href="#team_section">Tabel Aksara</a></li>
+				<li><a href="#services_section">Video</a></li>
+				<li><a href="#contactus_section">Tentang</a></li>
+			</ul>
+		</div>
+	</header>
+
+
+	<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+			<center>
+				<p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Media Pembelajaran</p>
+			</center>
+		</div>
+		<a href="subjects/computer_courses.html">
+			<div class="s-card"><img src="images/icon/computer-courses.png">
+				<p>Tabel Aksara Lontara</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="s-card"><img src="images/icon/online-tutorials.png">
+				<p>Pembelajaran Melalui Video</p>
+			</div>
+		</a>
+		<a href="subjects/jee.html#sample_papers">
+			<div class="s-card"><img src="images/icon/papers.jpg">
+				<p>Kuis Untuk Evaluasi Hasil Pembelajaran</p>
+			</div>
+		</a>
+	</div>
+
+	<!-- ABOUT -->
+	<div class="diffSection" id="about_section" style="margin-bottom: 50px;">
+		<center><p style="font-size: 50px; padding: 100px">Informasi</p></center>
+		<div class="about-content">
+			<div class="side-image">
+				<img class="sideImage" src="images/extra/e3.jpg">
+			</div>
+			<div class="side-text">
+				<h2>Apa itu Aksara Lontara ?</h2>
+				<p>Lontara adalah sebuah aksara tradisional yang digunakan oleh masyarakat Bugis dan Makassar di
+					Sulawesi Selatan, Indonesia. Aksara ini digunakan untuk menulis bahasa Bugis dan bahasa Makassar.
+					Aksara Lontara terdiri dari 23 huruf yang mewakili bunyi, dan 4 tanda baca yang digunakan untuk
+					mengatur ritme dan intonasi dalam membaca.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sliding Information -->
+	<!-- <marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left"
+		onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+		<div class="marqu">Aksara Lontara adalah sistem tulisan tradisional yang berakar dari budaya Bugis dan Makassar.
+			Mari kita jaga dan lestarikan kekayaan budaya ini bersama-sama. Dengan mempelajari aksara Lontara, kita
+			memperkuat identitas budaya kita dan menghormati warisan leluhur. Lontara bukan hanya sebuah tulisan, tetapi
+			simbol kebijaksanaan dan sejarah yang perlu kita banggakan.</div>
+	</marquee> -->
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<img src="images/icon/logo - Copy.png" style="width: 200px;">
+				<div class="logo"></div>
+				<div class="social-media">
+					<a href="#"><img src="images/icon\fb.png"></a>
+					<a href="#"><img src="images/icon\insta.png"></a>
+					<a href="#"><img src="images/icon\tt.png"></a>
+					<a href="#"><img src="images/icon\ytube.png"></a>
+					<a href="#"><img src="images/icon\linkedin.png"></a>
+				</div><br><br>
+				<p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p>
+				<br>
+				<p><img src="images/icon/location.png"> Lovely Professional University<br>Phagwara, Punjab-144401</p>
+				<br>
+				<p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp;
+					learnedonline9419@gmail.com</p>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

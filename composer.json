@@ -16,6 +16,7 @@
         "joaopaulolndev/filament-edit-profile": "^1.0",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "livewire/livewire": "^3.5",
         "pxlrbt/filament-environment-indicator": "^2.1",
         "swisnl/filament-backgrounds": "^1.1",
         "tobiasla78/filament-simple-pages": "^0.4.0"

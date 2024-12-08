@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+    <title>LearnEd</title>
+    <meta name="desciption" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header id="header" style="height: auto;">
+        <nav>
+            <div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+            <ul>
+                <li><a href="/index.html">Beranda</a></li>
+                <li><a class="active" href="/pembelajaran.html">Pembelajaran</a></li>
+                <li><a href="/tabel_aksara.html">Tabel Aksara</a></li>
+                <li><a href="/video.html">Video</a></li>
+                <li><a href="/tentang.html">Tentang</a></li>
+            </ul>
+            <a class="get-started" href="login.html">Masuk</a>
+            <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+        </nav>
+        <div class="side-menu" id="side-menu">
+            <div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+            <div class="user">
+                <img src="images/creator/roshan.jpeg" alt="Username">
+                <p>Roshan</p>
+            </div>
+            <ul>
+                <li><a class="active" href="">Beranda</a></li>
+                <li><a href="#portfolio_section">Pembelajaran</a></li>
+                <li><a href="#team_section">Tabel Aksara</a></li>
+                <li><a href="#services_section">Video</a></li>
+                <li><a href="#contactus_section">Tentang</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="extra">
+        <p style="margin-top: 55px; padding-bottom: 50px;background-image: url('images/courses/algo-course.jpg');">
+            Materi Pembelajaran Kelas 4A</p>
+        <div class="box-pembelajaran">
+            <h2>Lorem Ipsum</h2>
+            <p><strong>Lorem ipsum</strong> dolor sit amet, <em>consectetur</em> adipiscing elit. Nullam <u>nec</u>
+                urna vel <a href="#">libero</a> vehicula <span style="color: red;">semper</span>.</p>
+            <blockquote>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium."</p>
+            </blockquote>
+            <ul>
+                <li>Ut enim ad minima veniam</li>
+                <li>Quis nostrum exercitationem ullam corporis</li>
+                <li>Nemo enim ipsam voluptatem quia voluptas</li>
+            </ul>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui <code>blanditiis</code> praesentium
+                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere architecto veniam quidem est, voluptatum
+                molestias. Possimus laboriosam quidem velit maxime ea suscipit hic, vero modi, mollitia autem, facere at
+                qui sit. Corporis velit dolor, neque animi molestias nam fugit doloremque optio porro, ipsa asperiores
+                magnam? Ea laborum soluta inventore quasi sequi! Quidem nostrum fuga fugit autem, rem, eius nisi et
+                veniam quas commodi sunt quis? Ullam amet temporibus minus, architecto non doloremque error voluptate
+                maiores pariatur cumque obcaecati, unde voluptates beatae provident ipsum? Id, soluta magnam libero,
+                magni quod modi debitis natus sunt mollitia rem voluptatem nostrum. Voluptatem quis ad, doloribus rem in
+                vitae officia eligendi natus optio a cupiditate minus, inventore magnam et amet? Aliquid suscipit animi
+                maxime labore nam tenetur neque asperiores consectetur veritatis id dignissimos deleniti exercitationem,
+                aperiam et molestias adipisci, doloribus mollitia nulla libero provident ea autem. Vitae facere amet
+                optio blanditiis doloremque cum perferendis quo distinctio, aliquam voluptates natus mollitia architecto
+                placeat dolor eligendi labore? Consequatur ab molestiae deleniti quasi quidem reiciendis temporibus,
+                cumque illo totam tenetur dolorem voluptate repudiandae, tempora quo ad optio aspernatur exercitationem
+                a. Distinctio voluptate aut odit minus ut soluta provident debitis necessitatibus fugiat quos obcaecati
+                adipisci illum ipsum doloribus illo enim earum iusto, magnam consectetur laudantium eius ex? Tempore
+                provident dolorum harum, excepturi in recusandae saepe, quaerat, ipsam deleniti quos quae cum beatae
+                totam quasi adipisci. Fugit delectus minima labore rerum non dignissimos alias molestias culpa incidunt,
+                velit accusantium ullam doloribus id recusandae, veniam dicta dolorum iure excepturi facere, nihil
+                minus. Earum quis sunt dolorum error itaque distinctio dolorem sequi corrupti, ab deserunt pariatur esse
+                perferendis quidem nam quasi natus praesentium. Natus labore asperiores delectus voluptatem atque
+                possimus fugiat necessitatibus quam maiores nam nulla ex dolorem suscipit, molestias doloremque sapiente
+                quasi sint ab perferendis nemo velit, reiciendis enim modi! Doloremque minus nostrum deserunt quam
+                distinctio fuga labore omnis, unde soluta delectus quisquam quidem consequatur inventore beatae? Vero
+                fugiat quae enim!</p>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="left-col">
+                <img src="images/icon/logo - Copy.png" style="width: 200px;">
+                <div class="logo"></div>
+                <div class="social-media">
+                    <a href="#"><img src="images/icon\fb.png"></a>
+                    <a href="#"><img src="images/icon\insta.png"></a>
+                    <a href="#"><img src="images/icon\tt.png"></a>
+                    <a href="#"><img src="images/icon\ytube.png"></a>
+                    <a href="#"><img src="images/icon\linkedin.png"></a>
+                </div><br><br>
+                <p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p>
+                <br>
+                <p><img src="images/icon/location.png"> Lovely Professional University<br>Phagwara, Punjab-144401</p>
+                <br>
+                <p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp;
+                    learnedonline9419@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

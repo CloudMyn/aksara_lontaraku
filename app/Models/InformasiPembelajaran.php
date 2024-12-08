@@ -17,5 +17,11 @@ class InformasiPembelajaran extends Model
         'judul',
         'slug',
         'deskripsi',
+        'materi_pembelajaran_id',
     ];
+
+    public function materi_pembelajaran()
+    {
+        return $this->belongsTo(MateriPembelajaran::class);
+    }
 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+    <title>LearnEd</title>
+    <meta name="desciption" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header id="header" style="height: auto;">
+        <nav>
+            <div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
+            <ul>
+                <li><a href="/index.html">Beranda</a></li>
+                <li><a href="/pembelajaran.html">Pembelajaran</a></li>
+                <li><a class="active" href="/tabel_aksara.html">Tabel Aksara</a></li>
+                <li><a href="/video.html">Video</a></li>
+                <li><a href="/tentang.html">Tentang</a></li>
+            </ul>
+            <a class="get-started" href="login.html">Masuk</a>
+            <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+        </nav>
+        <div class="side-menu" id="side-menu">
+            <div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+            <div class="user">
+                <img src="images/creator/roshan.jpeg" alt="Username">
+                <p>Roshan</p>
+            </div>
+            <ul>
+                <li><a class="active" href="">Beranda</a></li>
+                <li><a href="#portfolio_section">Pembelajaran</a></li>
+                <li><a href="#team_section">Tabel Aksara</a></li>
+                <li><a href="#services_section">Video</a></li>
+                <li><a href="#contactus_section">Tentang</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="diffSection" id="portfolio_section">
+        <center>
+            <p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Halaman Tabel Aksara</p>
+        </center>
+        <div class="content">
+            <p>Berikut adalah Tabel Lengkap Aksara Lontara yang terdiri dari 22 huruf yang mewakili bunyi, dan 4 tanda
+                baca yang digunakan untuk mengatur ritme dan intonasi dalam membaca. Kami berharap dengan adanya tabel
+                ini dapat membantu Anda dalam mempelajari Aksara Lontara dengan lebih baik.</p>
+        </div>
+    </div>
+    <div class="extra">
+        <p>22 Huruf Lontara & 4 Tanda</p>
+        <div class="smbox">
+            <!-- <span>
+                <center>
+                    <div class="font-lontara">k</div>
+                    <div class="det">Ka</div>
+                </center>
+            </span> -->
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="left-col">
+                <img src="images/icon/logo - Copy.png" style="width: 200px;">
+                <div class="logo"></div>
+                <div class="social-media">
+                    <a href="#"><img src="images/icon\fb.png"></a>
+                    <a href="#"><img src="images/icon\insta.png"></a>
+                    <a href="#"><img src="images/icon\tt.png"></a>
+                    <a href="#"><img src="images/icon\ytube.png"></a>
+                    <a href="#"><img src="images/icon\linkedin.png"></a>
+                </div><br><br>
+                <p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p>
+                <br>
+                <p><img src="images/icon/location.png"> Lovely Professional University<br>Phagwara, Punjab-144401</p>
+                <br>
+                <p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp;
+                    learnedonline9419@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const letters = [
+            { symbol: 'k', description: 'Ka' },
+            { symbol: 'g', description: 'Ga' },
+            { symbol: 'N', description: 'Nga' },
+            { symbol: 'K', description: 'Ka' },
+            { symbol: 'p', description: 'Pa' },
+            { symbol: 'b', description: 'Ba' },
+            { symbol: 'm', description: 'Ma' },
+            { symbol: 't', description: 'Ta' },
+            { symbol: 'P', description: 'Pa' },
+            { symbol: 'n', description: 'Na' },
+            { symbol: 'c', description: 'Ca' },
+            { symbol: 'j', description: 'Ja' },
+            { symbol: 'Y', description: 'Nya' },
+            { symbol: 'R', description: 'Ra' },
+            { symbol: 'y', description: 'Ya' },
+            { symbol: 'r', description: 'Ra' },
+            { symbol: 'l', description: 'La' },
+            { symbol: 'C', description: 'Ca' },
+            { symbol: 'w', description: 'Wa' },
+            { symbol: 's', description: 'Sa' },
+            { symbol: 'a', description: 'A' },
+            { symbol: 'h', description: 'Ha' },
+            { symbol: 'i', description: 'I' },
+            { symbol: 'u', description: 'U' },
+            { symbol: 'e', description: 'E' },
+            { symbol: 'o', description: 'O' },
+            // { symbol: ',', description: ',' },
+            // { symbol: '.', description: '.' },
+            // { symbol: '(', description: '(' },
+            // { symbol: ')', description: ')' }
+        ];
+
+
+        const container = document.getElementsByClassName('smbox')[0];
+
+        letters.forEach(letter => {
+            const letterDiv = document.createElement('span');
+            letterDiv.innerHTML = `
+                <center>
+                <div class="font-lontara">${letter.symbol}</div>
+                <div class="det">${letter.description}</div>
+                </center>
+            `;
+            container.appendChild(letterDiv);
+        });
+    </script>
+
+</body>
+
+</html>

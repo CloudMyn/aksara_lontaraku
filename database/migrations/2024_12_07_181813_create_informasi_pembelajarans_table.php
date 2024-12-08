@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('gambar', 255)->nullable(); // Kolom gambar
             $table->string('judul', 255); // Kolom judul
             $table->string('slug', 255)->unique(); // Kolom slug
+            $table->foreignId('materi_pembelajaran_id')->constrained('materi_pembelajaran')->cascadeOnDelete();
             $table->text('deskripsi'); // Kolom deskripsi
             $table->timestamps();
         });

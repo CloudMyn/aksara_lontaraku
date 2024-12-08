@@ -29,4 +29,9 @@ class MateriPembelajaran extends Model
             $model->slug = \Illuminate\Support\Str::slug($model->judul);
         });
     }
+
+    public function informasi_pembelajaran()
+    {
+        return $this->hasMany(InformasiPembelajaran::class);
+    }
 }
