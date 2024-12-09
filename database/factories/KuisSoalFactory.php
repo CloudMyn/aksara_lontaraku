@@ -17,7 +17,7 @@ class KuisSoalFactory extends Factory
     public function definition(): array
     {
         $array = [
-            'k', 'g', 'N', 'K', 'p', 'b', 'm', 't', 'P', 'n', 'c', 'j', 'Y', 'R', 'y', 'r', 'l', 'C', 'w', 's', 'a', 'h', 'i', 'u', 'e', 'o'
+            'k', 'g', 'N', 'p', 'b', 'm', 't'
         ];
 
         $answer_a   =   $this->faker->randomElement($array);
@@ -31,8 +31,7 @@ class KuisSoalFactory extends Factory
             'pilihan_b' => $answer_b,
             'pilihan_c' => $answer_c,
             'pilihan_d' => $answer_d,
-            'jawaban' => $this->faker->randomElement([$answer_a, $answer_b, $answer_c, $answer_d]),
-            'nilai' => $this->faker->numberBetween(2, 5),
+            'jawaban' => $this->faker->randomElement(['a', 'b', 'c', 'd']),
         ];
     }
 }

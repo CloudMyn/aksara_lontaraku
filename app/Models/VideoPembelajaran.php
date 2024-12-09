@@ -13,9 +13,11 @@ class VideoPembelajaran extends Model
     protected $table = 'video_pembelajaran';
 
     protected $fillable = [
+        'gambar',
         'judul',
         'slug',
         'deskripsi',
+        'durasi',
         'video',
     ];
 }

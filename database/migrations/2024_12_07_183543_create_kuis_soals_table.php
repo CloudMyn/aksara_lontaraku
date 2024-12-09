@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('pilihan_c', 255);
             $table->string('pilihan_d', 255);
             $table->string('jawaban', 255);
-            $table->integer('nilai')->default(2);
             $table->foreignId('video_pembelajaran_id')->constrained('video_pembelajaran')->cascadeOnDelete();
             $table->timestamps();
         });

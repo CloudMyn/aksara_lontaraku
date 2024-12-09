@@ -53,10 +53,6 @@ class KuisSoalResource extends Resource
                 Forms\Components\TextInput::make('jawaban')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('nilai')
-                    ->required()
-                    ->numeric()
-                    ->default(2),
                 Forms\Components\TextInput::make('video_pembelajaran_id')
                     ->required()
                     ->numeric(),
@@ -79,9 +75,6 @@ class KuisSoalResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jawaban')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('nilai')
-                    ->numeric()
-                    ->sortable(),
                 Tables\Columns\TextColumn::make('video_pembelajaran_id')
                     ->numeric()
                     ->sortable(),

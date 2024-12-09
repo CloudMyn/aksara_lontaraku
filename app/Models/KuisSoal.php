@@ -19,7 +19,6 @@ class KuisSoal extends Model
         'pilihan_c',
         'pilihan_d',
         'jawaban',
-        'nilai',
         'video_pembelajaran_id',
     ];
 

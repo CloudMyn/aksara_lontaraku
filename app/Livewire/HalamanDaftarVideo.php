@@ -6,8 +6,11 @@ use Livewire\Component;
 
 class HalamanDaftarVideo extends Component
 {
+    #[\Livewire\Attributes\Title('Halaman Video Pembelajaran')]
     public function render()
     {
-        return view('livewire.halaman-daftar-video');
+        $videos = \App\Models\VideoPembelajaran::orderBy('created_at', 'desc')->get();
+
+        return view('livewire.halaman-daftar-video', compact('videos'));
     }
 }
