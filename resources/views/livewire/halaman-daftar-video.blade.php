@@ -10,7 +10,7 @@
                 <div class="item-content">
                     <div class="content-number">{{ $loop->index + 1 }}</div>
                     <div class="content-body">
-                        <div class="content-title">{{ $video->judul }}</div>
+                        <div class="content-title">{{ \Illuminate\Support\Str::limit($video->judul, 70) }}</div>
                         <div class="content-subtitle">{{ $video->durasi }}</div>
                     </div>
                 </div>

@@ -40,7 +40,6 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login(\App\Filament\Auth\CustomLogin::class)
             ->passwordReset()
-            ->registration()
             ->darkMode(false)
             ->colors([
                 'primary' => Color::Orange,

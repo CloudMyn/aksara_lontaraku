@@ -27,14 +27,41 @@
     @livewireStyles
     @livewireScripts
 
+    <style>
+        nav {
+            padding: 0px !important;
+        }
+
+        nav>* {
+            padding: 20px 0;
+        }
+
+        nav>div.logo {
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>div.logo>span {
+            font-size: 21px;
+            font-weight: 600;
+            color: #795000;
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <header id="header" style="height: auto">
         <nav>
-            <div class="logo" style="height: 20px">
-                <img src="{{ asset('logo.png') }}" alt="logo" style="height: 100%">
+            <div class="logo">
+                <img src="{{ asset('logo.png') }}" alt="logo"
+                    style="height: 100%; height: 68px; object-fit: contain">
+                <span>
+                    Aksara Lontara'Ku
+                </span>
             </div>
             <ul>
                 <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a wire:navigate href="/">Beranda</a>
@@ -50,8 +77,11 @@
             </ul>
             @if (auth()->user())
                 <div>
-                    <a class="get-started" href="javascript:void(0)" style="border-radius: 3px; color: #6e6700">{{ "@" . auth()->user()->username }}</a>
-                    <a class="get-started" style="margin-left: 5px; border-radius: 3px; background-color: #fe5a5a; border-color: #f63e3e; color: #fff" href="{{ route('logout') }}">Keluar</a>
+                    <a class="get-started" href="javascript:void(0)"
+                        style="border-radius: 3px; color: #6e6700">{{ '@' . auth()->user()->username }}</a>
+                    <a class="get-started"
+                        style="margin-left: 5px; border-radius: 3px; background-color: #fe5a5a; border-color: #f63e3e; color: #fff"
+                        href="{{ route('logout') }}">Keluar</a>
                 </div>
             @else
                 <a class="get-started" href="{{ route('login') }}">Masuk</a>
@@ -92,7 +122,7 @@
     <footer>
         <div class="footer-container">
             <div class="left-col">
-                <img src="{{ asset('/umi.png') }}" style="width: 200px;">
+                <img src="{{ asset('/logo.png') }}" style="width: 200px;">
                 <div class="logo"></div>
                 <div class="social-media">
                     <a href="#"><img src="/front-end/images/icon\fb.png"></a>

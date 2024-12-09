@@ -9,4 +9,11 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateMateriPembelajaran extends CreateRecord
 {
     protected static string $resource = MateriPembelajaranResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        $resource = static::getResource();
+
+        return $resource::getUrl('index');
+    }
 }

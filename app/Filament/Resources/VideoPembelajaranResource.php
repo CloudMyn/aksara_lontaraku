@@ -35,18 +35,44 @@ class VideoPembelajaranResource extends Resource
     {
         return $form
             ->schema([
+
+                Forms\Components\FileUpload::make('gambar')
+                    ->columnSpanFull()
+                    ->image()
+                    ->label('Gambar')
+                    ->maxSize(1024 * 5),
+
                 Forms\Components\TextInput::make('judul')
                     ->required()
+                    ->live()
+                    ->afterStateUpdated(function ($set, $state) {
+                        $set('slug', \Illuminate\Support\Str::slug($state));
+                    })
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('deskripsi')
+
+                Forms\Components\TextInput::make('durasi')
                     ->required()
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('video_url')
-                    ->required()
+                    ->columnSpanFull()
                     ->maxLength(255),
+
+                Forms\Components\RichEditor::make('deskripsi')
+                    ->required()
+                    ->disableToolbarButtons([
+                        'blockquote',
+                        'strike',
+                        'attachFiles',
+                    ])
+                    ->columnSpanFull(),
+
+                Forms\Components\Textarea::make('video')
+                    ->label('Link Video')
+                    ->required()
+                    ->columnSpanFull()
+                    ->maxLength(900),
             ]);
     }
 
@@ -55,25 +81,28 @@ class VideoPembelajaranResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('judul')
+                    ->limit(30)
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+
+                Tables\Columns\TextColumn::make('durasi')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('video_url')
-                    ->searchable(),
+
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Diubah Pada')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

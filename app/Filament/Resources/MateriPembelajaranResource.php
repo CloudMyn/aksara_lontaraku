@@ -53,10 +53,9 @@ class MateriPembelajaranResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\RichEditor::make('deskripsi')
-                    ->required()
+                Forms\Components\TextInput::make('deskripsi')
                     ->columnSpanFull()
-                    ->maxLength(500),
+                    ->maxLength(199),
             ]);
     }
 

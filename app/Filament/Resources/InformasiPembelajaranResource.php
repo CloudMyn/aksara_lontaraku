@@ -35,16 +35,36 @@ class InformasiPembelajaranResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('gambar')
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('gambar')
+                    ->required()
+                    ->columnSpanFull()
+                    ->maxSize(1024 * 5)
+                    ->image(),
                 Forms\Components\TextInput::make('judul')
                     ->required()
+                    ->live()
+                    ->afterStateUpdated(function ($set, $state) {
+                        $set('slug', \Illuminate\Support\Str::slug($state));
+                    })
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('deskripsi')
+
+                Forms\Components\Select::make('materi_pembelajaran_id')
+                    ->relationship('materi_pembelajaran', 'judul')
+                    ->columnSpanFull()
+                    ->required(),
+
+                Forms\Components\RichEditor::make('deskripsi')
                     ->required()
+                    ->minLength(3)
+                    ->disableToolbarButtons([
+                        'blockquote',
+                        'strike',
+                        'attachFiles',
+                    ])
                     ->columnSpanFull(),
             ]);
     }
@@ -53,16 +73,21 @@ class InformasiPembelajaranResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('gambar')
+                Tables\Columns\ImageColumn::make('gambar')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('judul')
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
@@ -73,6 +98,7 @@ class InformasiPembelajaranResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

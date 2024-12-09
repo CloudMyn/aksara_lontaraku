@@ -6,6 +6,7 @@ use App\Filament\Resources\KuisSoalResource\Pages;
 use App\Filament\Resources\KuisSoalResource\RelationManagers;
 use App\Models\KuisSoal;
 use Filament\Forms;
+use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -38,24 +39,39 @@ class KuisSoalResource extends Resource
                 Forms\Components\TextInput::make('soal')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('pilihan_a')
+
+                Forms\Components\Select::make('video_pembelajaran_id')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('pilihan_b')
+                    ->relationship('video_pembelajaran', 'judul'),
+
+                Fieldset::make('Pilihan Jawaban')
+                    ->schema([
+
+                        Forms\Components\TextInput::make('pilihan_a')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('pilihan_b')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('pilihan_c')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('pilihan_d')
+                            ->required()
+                            ->maxLength(255),
+
+                    ]),
+
+                Forms\Components\Select::make('jawaban')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('pilihan_c')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('pilihan_d')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('jawaban')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('video_pembelajaran_id')
-                    ->required()
-                    ->numeric(),
+                    ->columnSpanFull()
+                    ->options([
+                        'a' => 'A',
+                        'b' => 'B',
+                        'c' => 'C',
+                        'd' => 'D',
+                    ]),
+
             ]);
     }
 
@@ -65,24 +81,18 @@ class KuisSoalResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('soal')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('pilihan_a')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('pilihan_b')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('pilihan_c')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('pilihan_d')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('jawaban')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('video_pembelajaran_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('video_pembelajaran.judul')
+                    ->limit(40)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -91,7 +101,9 @@ class KuisSoalResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

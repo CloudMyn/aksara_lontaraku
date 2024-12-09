@@ -9,7 +9,7 @@
 @push('header-content')
     <div class="head-container" style="margin-top: 80px">
         <div class="svg-image" style="height: 230px; width: 100vw">
-            <img src="{{ (strpos($konten->gambar, 'https') === 0) ? $konten->gambar : "storage/" . $konten->gambar }}" alt="SVG" width="100%" height="230px" style="object-fit: cover; width: 100%;">
+            <img src="{{ (strpos($konten->gambar, 'https') === 0) ? $konten->gambar : "/storage/" . $konten->gambar }}" alt="SVG" width="100%" height="230px" style="object-fit: cover; width: 100%;">
         </div>
     </div>
 @endpush

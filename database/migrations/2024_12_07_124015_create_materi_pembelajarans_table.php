@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('judul', 255); // Kolom judul
             $table->string('slug', 255)->unique(); // Kolom slug
             $table->string('kelas', 255); // Kolom kelas
-            $table->text('deskripsi'); // Kolom deskripsi
+            $table->text('deskripsi')->nullable(); // Kolom deskripsi
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
