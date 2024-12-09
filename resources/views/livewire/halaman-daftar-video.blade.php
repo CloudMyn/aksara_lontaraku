@@ -1,4 +1,4 @@
-<div class="extra">
+<div class="extra" style="min-height: 70vh">
     <p style="margin-top: 55px; padding-bottom: 50px;">Daftar Video Pembelajaran</p>
     <div class="box-container">
 
