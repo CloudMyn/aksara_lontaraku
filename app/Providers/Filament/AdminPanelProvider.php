@@ -104,7 +104,6 @@ class AdminPanelProvider extends PanelProvider
                     ),
             ])
             ->spa(config('dashboard.panel.single_page_aplication'))
-            ->databaseNotifications()
             ->authMiddleware([
                 Authenticate::class,
             ])
