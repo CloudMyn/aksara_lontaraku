@@ -38,6 +38,14 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
+
+                Forms\Components\FileUpload::make('avatar_url')
+                    ->label('Avatar')
+                    ->required()
+                    ->image()
+                    ->columnSpanFull()
+                    ->directory('avatars'),
+
                 Forms\Components\TextInput::make('name')
                     ->label('Nama')
                     ->required()
@@ -58,10 +66,12 @@ class UserResource extends Resource
                     ->label('Kata Sandi')
                     ->password()
                     ->required()
+                    ->revealable()
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('status')
+                Forms\Components\Select::make('status')
                     ->label('Status')
+                    ->options(['ACTIVE' => 'Active', 'NONACTIVE' => 'Nonactive', 'BLOCKED' => 'Blocked'])
                     ->required(),
 
                 Forms\Components\Select::make('role')

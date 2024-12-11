@@ -42,7 +42,7 @@ class InformasiPembelajaranResource extends Resource
                     ->image(),
                 Forms\Components\TextInput::make('judul')
                     ->required()
-                    ->live()
+                    ->live(onBlur: true)
                     ->afterStateUpdated(function ($set, $state) {
                         $set('slug', \Illuminate\Support\Str::slug($state));
                     })
