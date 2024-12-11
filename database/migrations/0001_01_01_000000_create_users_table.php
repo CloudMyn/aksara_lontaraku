@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('username')->unique(); // Username unik
             $table->string('email')->unique(); // Email unik
             $table->string('password'); // Password
-            $table->enum('role', ['ADMIN', 'USER', 'DEVELOPER'])->default('USER');
+            $table->enum('role', ['ADMIN', 'USER', 'DEVELOPER', 'GURU'])->default('USER');
             $table->enum('status', ['ACTIVE', 'NONACTIVE', 'BLOCKED'])->default('ACTIVE'); // Status pengguna
             $table->timestamp('email_verified_at')->nullable(); // Tanggal verifikasi email
             $table->timestamp('phone_verified_at')->nullable(); // Tanggal verifikasi telepon
