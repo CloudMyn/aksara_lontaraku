@@ -30,7 +30,6 @@ class GuruPanelProvider extends PanelProvider
         return $panel
             ->id('guru')
             ->path('guru')
-            ->login(\App\Filament\Auth\CustomLogin::class)
             ->passwordReset()
             ->darkMode(false)
             ->colors([
