@@ -65,7 +65,6 @@ class User extends Authenticatable implements HasAvatar, FilamentUser
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
     }
