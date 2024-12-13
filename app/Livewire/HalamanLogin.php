@@ -35,6 +35,8 @@ class HalamanLogin extends Component
             return redirect()->route('filament.admin.pages.dashboard');
         } elseif ($user->role == 'USER') {
             return redirect()->route('home');
+        } else if ($user->role == 'GURU') {
+            return redirect()->route('filament.guru.pages.dashboard');
         }
     }
 }
