@@ -34,7 +34,7 @@ class AksaraLontaraResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->columns(1)
+            ->columns(3)
             ->schema([
                 Forms\Components\TextInput::make('nama_aksara')
                     ->required()
@@ -45,6 +45,10 @@ class AksaraLontaraResource extends Resource
                 Forms\Components\TextInput::make('urutan')
                     ->required()
                     ->numeric(),
+                Forms\Components\FileUpload::make('suara')
+                    ->label('Suara')
+                    ->columnSpanFull()
+                    ->maxSize(1024),
             ]);
     }
 

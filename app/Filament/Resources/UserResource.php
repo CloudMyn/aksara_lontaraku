@@ -80,6 +80,7 @@ class UserResource extends Resource
                     ->options([
                         'ADMIN' => 'ADMIN',
                         'USER' => 'PENGGUNA',
+                        'GURU' => 'GURU',
                     ]),
             ]);
     }
