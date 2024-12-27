@@ -1,9 +1,25 @@
 <div class="container">
+    <style>
+        .login-draw {
+            width: 400px;
+        }
+
+        .login-wrap {
+            width: 100%;
+        }
+
+        @media (min-width: 1080px) {
+            .login-draw {
+                width: 400px;
+            }
+        }
+    </style>
+
     <div class="row justify-content-center">
-        <div class="col-md-12 col-lg-10">
+        <div class="col-md-12 col-lg-12">
             <div class="wrap d-md-flex">
-                <div class="text-wrap text-center d-flex align-items-center order-md-last"
-                    style="position: relative; width: 400px;">
+                <div class="login-draw text-wrap text-center d-flex align-items-center order-md-last"
+                    style="position: relative">
                     <div class="wave-container">
                         <div class="wave"></div>
                         <div class="wave"></div>
@@ -12,7 +28,7 @@
                         <div class="wave"></div>
                     </div>
                 </div>
-                <div class="login-wrap p-4 p-lg-5" style="width: 600px;">
+                <div class="login-wrap p-4 p-lg-5">
                     <div class="d-flex">
                         <div class="w-100">
                             <h3 class="mb-4">Halaman Login</h3>
