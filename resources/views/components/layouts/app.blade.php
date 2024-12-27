@@ -86,7 +86,7 @@
             @else
                 <a class="get-started" href="{{ route('login') }}">Masuk</a>
             @endif
-            <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+            <img src="{{ asset('logo.png') }}" class="menu" onclick="sideMenu(0)" alt="menu">
         </nav>
 
         @stack('header-content')
@@ -111,7 +111,17 @@
                         href="{{ route('daftar-video-pembelajaran') }}">Video</a></li>
                 <li class="{{ request()->routeIs('tentang') ? 'active' : '' }}"><a wire:navigate
                         href="{{ route('tentang') }}">Tentang</a></li>
+
+                <li>
+                    @if (auth()->user())
+                        <a style="margin-left: 5px; border-radius: 3px; background-color: #fe5a5a; border-color: #f63e3e; color: #fff"
+                            href="{{ route('logout') }}">Keluar</a>
+                    @else
+                        <a href="{{ route('login') }}">Masuk</a>
+                    @endif
+                </li>
             </ul>
+
         </div>
 
     </header>
