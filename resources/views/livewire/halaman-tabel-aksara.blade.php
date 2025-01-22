@@ -13,6 +13,12 @@
     <div class="extra">
         <p>22 Huruf Lontara & 4 Tanda</p>
         <div class="smbox">
+            {{-- <button class="item-smbox play-sound">
+                <center>
+                    <div class="font-lontara"></div>
+                    <div class="det"></div>
+                </center>
+            </button> --}}
             @foreach ($aksara_data as $aksara)
                 <button class="item-smbox play-sound" onclick="playSound('{{ 'storage/' . $aksara->suara }}')">
                     <center>
