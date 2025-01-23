@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\VideoPembelajaran;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -32,6 +33,7 @@ class KuisSoalFactory extends Factory
             'pilihan_c' => $answer_c,
             'pilihan_d' => $answer_d,
             'jawaban' => $this->faker->randomElement(['a', 'b', 'c', 'd']),
+            'video_pembelajaran_id' => VideoPembelajaran::factory()->create()->id,
         ];
     }
 }

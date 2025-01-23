@@ -20,7 +20,7 @@ class VideoPembelajaranFactory extends Factory
             'judul' => $this->faker->sentence,
             'gambar' => $this->faker->imageUrl(640, 480, 'cats'),
             'slug' => $this->faker->slug,
-            'deskripsi' => $this->faker->paragraph,
+            'deskripsi' => $this->faker->sentence,
             'durasi' => rand(3, 8) . ' menit',
             'video' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/FtQu1QOyJcE?si=6ksv8D04XutBslG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
         ];
