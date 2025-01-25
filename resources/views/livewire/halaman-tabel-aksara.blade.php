@@ -5,9 +5,9 @@
             <p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Halaman Tabel Aksara</p>
         </center>
         <div class="content">
-            <p>Berikut adalah Tabel Lengkap Aksara Lontara yang terdiri dari 22 huruf yang mewakili bunyi, dan 4 tanda
-                baca yang digunakan untuk mengatur ritme dan intonasi dalam membaca. Kami berharap dengan adanya tabel
-                ini dapat membantu Anda dalam mempelajari Aksara Lontara dengan lebih baik.</p>
+            <p>
+                Tabel ini berisi 19 aksara dasar yang mewakili berbagai bunyi dalam bahasa Makassar. Selain itu, aksara lontara makassar digunakan untuk memperjelas struktur, ritme, dan intonasi dalam membaca teks beraksara Makassar. Kami berharap tabel ini dapat menjadi panduan yang membantu Anda dalam mempelajari dan memahami Aksara Makassar dengan lebih mudah serta melestarikan warisan budaya ini.
+            </p>
         </div>
     </div>
     <div class="extra">
