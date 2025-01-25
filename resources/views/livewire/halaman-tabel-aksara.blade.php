@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="extra">
-        <p>22 Huruf Lontara & 4 Tanda</p>
+        <p>19 Huruf Lontara</p>
         <div class="smbox">
             {{-- <button class="item-smbox play-sound">
                 <center>
