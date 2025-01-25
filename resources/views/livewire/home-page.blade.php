@@ -52,8 +52,7 @@
         <div class="quote">
             <p>Hal yang indah tentang belajar adalah bahwa tidak ada yang dapat mengambilnya dari Anda</p>
             <h5>Pendidikan adalah proses memfasilitasi pembelajaran, atau pengambilan pengetahuan, keterampilan,
-                nilai, keyakinan, dan kebiasaan. Metode pendidikan termasuk mengajar, melatih, bercerita, diskusi
-                dan penelitian yang dipandu!</h5>
+                nilai, keyakinan, dan kebiasaan. Metode pendidikan termaksud mengajar, melatih, bercerita, dan berdiskusi</h5>
             <div class="play">
                 <img src="/front-end/images/icon/play.png" alt="play"><span><a
                         href="{{ route('daftar-video-pembelajaran') }}">Mari Memulai</a></span>
