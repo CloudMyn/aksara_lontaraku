@@ -54,12 +54,7 @@
         <div class="quote">
             {{-- <p>Hal yang indah tentang belajar adalah bahwa tidak ada yang dapat mengambilnya dari Anda</p> --}}
             <h2>
-                Belajar bahasa Lontara Makassar bukan hanya mengenal aksara, tapi juga menjaga warisan budaya leluhur kita!
-                Dengan mempelajarinya, kamu akan lebih memahami sejarah, seni, dan kebanggaan identitas daerah. Yuk, jadikan
-                pembelajaran ini seru dan bermakna untuk masa depan budaya kita!
-                Belajar bahasa Lontara Makassar bukan hanya mengenal aksara, tapi juga menjaga warisan budaya leluhur kita!
-                Dengan mempelajarinya, kamu akan lebih memahami sejarah, seni, dan kebanggaan identitas daerah. Yuk, jadikan
-                pembelajaran ini seru dan bermakna untuk masa depan budaya kita!
+                Belajar bahasa Lontara Makassar bukan hanya mengenal aksara, tapi juga menjaga warisan budaya leluhur kita! Dengan mempelajarinya, kamu akan lebih memahami sejarah, seni, dan kebanggaan identitas daerah. Yuk, jadikan pembelajaran ini seru dan bermakna untuk masa depan budaya kita!
             </h2>
             <h5>Pendidikan adalah proses memfasilitasi pembelajaran, atau pengambilan pengetahuan, keterampilan,
                 nilai, keyakinan, dan kebiasaan. Metode pendidikan termaksud mengajar, melatih, bercerita, dan berdiskusi
