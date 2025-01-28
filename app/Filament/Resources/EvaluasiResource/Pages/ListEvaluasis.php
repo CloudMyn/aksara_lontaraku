@@ -16,7 +16,7 @@ class ListEvaluasis extends ListRecords
             Actions\CreateAction::make(),
             Actions\Action::make('export_pdf')
                 ->label('Export PDF')
-                ->url(route('export-penilaian')),
+                ->url(route('export-penilaian'), true),
         ];
     }
 
