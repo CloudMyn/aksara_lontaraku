@@ -13,7 +13,7 @@
 </style>
 
 <div class="extra" style="min-height: 70vh">
-    <p style="margin-top: 55px; padding-bottom: 10px;">Tentang Website Aksara Lontara'ku</p>
+    <p style="margin-top: 55px; padding-bottom: 10px;">Info Aksara Lontara'ku</p>
     <p style="padding-bottom: 50px; padding-top: 5px; font-size: 2rem;">(ᨕᨗᨇᨚ ᨕᨀᨔᨑ ᨒᨚᨈᨑᨀᨕᨘ᨞)</p>
     <div class="box-container">
 

@@ -155,7 +155,7 @@ a, button {
     margin-top: 215px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
 }
 
@@ -574,7 +574,9 @@ a, button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--transparent-black), var(--transparent-black)), url("images/kids.jpg");
+    /* background-image: linear-gradient(var(--transparent-black), var(--transparent-black)), url("images/kids.jpg"); */
+    background-image: linear-gradient(var(--transparent-black), var(--transparent-black)), url("/img_04.jpg");
+
     background-size: cover;
     background-attachment: fixed;
 }
