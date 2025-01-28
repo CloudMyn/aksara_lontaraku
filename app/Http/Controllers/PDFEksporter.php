@@ -19,7 +19,7 @@ class PDFEksporter extends Controller
                 $index,
                 $model->user->name,
                 $model->score,
-                str($model->video_pembelajaran->judul)->limit(30),
+                str($model->video_pembelajaran?->judul ?? '-')->limit(30),
             ];
 
             $index++;
