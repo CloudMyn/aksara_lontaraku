@@ -75,6 +75,7 @@ class InformasiPembelajaranResource extends Resource
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('judul')
+                    ->limit(30)
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('slug')

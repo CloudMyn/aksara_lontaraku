@@ -80,7 +80,8 @@ class KuisSoalResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('soal')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(40),
                 Tables\Columns\TextColumn::make('jawaban')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('video_pembelajaran.judul')

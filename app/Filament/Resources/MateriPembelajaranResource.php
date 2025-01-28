@@ -64,7 +64,8 @@ class MateriPembelajaranResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('gambar'),
-                Tables\Columns\TextColumn::make('judul'),
+                Tables\Columns\TextColumn::make('judul')
+                    ->limit(30),
                 Tables\Columns\TextColumn::make('kelas'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat Pada')
