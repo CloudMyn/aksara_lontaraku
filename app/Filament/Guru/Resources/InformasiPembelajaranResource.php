@@ -48,13 +48,11 @@ class InformasiPembelajaranResource extends Resource
                     })
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Hidden::make('slug')
+                    ->required(),
 
                 Forms\Components\Select::make('materi_pembelajaran_id')
                     ->relationship('materi_pembelajaran', 'judul')
-                    ->columnSpanFull()
                     ->required(),
 
                 Forms\Components\RichEditor::make('deskripsi')

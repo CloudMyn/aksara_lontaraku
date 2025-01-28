@@ -1,7 +1,8 @@
 <div style="min-height: 50vh">
 
     <div class="extra">
-        <p style="margin-top: 55px; padding-bottom: 50px;">Daftar Materi Pembelajaran</p>
+        <p style="margin-top: 55px; padding-bottom: 10px;">Daftar Materi Pembelajaran</p>
+        <p style="padding-bottom: 50px; padding-top: 5px; font-size: 2rem;">(ᨆᨈᨙᨑᨗ ᨄᨅᨒᨓᨗᨍᨑᨗᨕᨊ᨞)</p>
         <div class="box-container">
 
             @foreach ($materi as $_materi)

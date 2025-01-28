@@ -41,7 +41,6 @@ class UserResource extends Resource
 
                 Forms\Components\FileUpload::make('avatar_url')
                     ->label('Avatar')
-                    ->required()
                     ->image()
                     ->columnSpanFull()
                     ->directory('avatars'),
@@ -65,7 +64,9 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('password')
                     ->label('Kata Sandi')
                     ->password()
-                    ->required()
+                    ->required(function ($record) {
+                        return !$record;
+                    })
                     ->revealable()
                     ->maxLength(255),
 
@@ -76,12 +77,21 @@ class UserResource extends Resource
 
                 Forms\Components\Select::make('role')
                     ->label('Peran Pengguna')
+                    ->live(onBlur: true)
                     ->required()
                     ->options([
                         'ADMIN' => 'ADMIN',
-                        'USER' => 'PENGGUNA',
+                        'USER' => 'SISWA',
                         'GURU' => 'GURU',
                     ]),
+
+                Forms\Components\TextInput::make('kelas')
+                    ->label('Kelas')
+                    ->columnSpanFull()
+                    ->hidden(function ($get) {
+                        return $get('role') !== 'USER';
+                    })
+                    ->required(),
             ]);
     }
 

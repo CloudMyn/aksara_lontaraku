@@ -1,5 +1,6 @@
 <div class="extra" style="min-height: 70vh">
-    <p style="margin-top: 55px; padding-bottom: 50px;">Daftar Video Pembelajaran</p>
+    <p style="margin-top: 55px; padding-bottom: 10px;">Daftar Video Pembelajaran</p>
+    <p style="padding-bottom: 50px; padding-top: 5px; font-size: 2rem;">(ᨄᨗᨉᨙᨕ ᨄᨅᨒᨓᨗᨍᨑᨗᨕᨊ᨞)</p>
     <div class="box-container">
 
         @foreach ($videos as $video)

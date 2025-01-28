@@ -2,11 +2,15 @@
 
     <div class="diffSection" id="portfolio_section">
         <center>
-            <p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Halaman Tabel Aksara</p>
+            <p style="font-size: 47px; margin-top: 100px; padding-bottom: 10px;">Halaman Tabel Aksara</p>
+            <p style="padding-bottom: 50px; padding-top: 5px; font-size: 2rem;">(ᨈᨅᨒ ᨕᨀᨔᨑᨕ᨞)</p>
         </center>
         <div class="content">
             <p>
-                Tabel ini berisi 19 aksara dasar yang mewakili berbagai bunyi dalam bahasa Makassar. Selain itu, aksara lontara makassar digunakan untuk memperjelas struktur, ritme, dan intonasi dalam membaca teks beraksara Makassar. Kami berharap tabel ini dapat menjadi panduan yang membantu Anda dalam mempelajari dan memahami Aksara Makassar dengan lebih mudah serta melestarikan warisan budaya ini.
+                Tabel ini berisi 19 aksara dasar yang mewakili berbagai bunyi dalam bahasa Makassar. Selain itu, aksara
+                lontara makassar digunakan untuk memperjelas struktur, ritme, dan intonasi dalam membaca teks beraksara
+                Makassar. Kami berharap tabel ini dapat menjadi panduan yang membantu Anda dalam mempelajari dan
+                memahami Aksara Makassar dengan lebih mudah serta melestarikan warisan budaya ini.
             </p>
         </div>
     </div>

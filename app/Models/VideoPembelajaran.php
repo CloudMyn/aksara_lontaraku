@@ -20,4 +20,8 @@ class VideoPembelajaran extends Model
         'durasi',
         'video',
     ];
+
+    public function kuis() {
+        return $this->hasMany(KuisSoal::class);
+    }
 }

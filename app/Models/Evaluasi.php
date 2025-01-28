@@ -14,11 +14,17 @@ class Evaluasi extends Model
 
     protected $fillable = [
         'score',
+        'video_pembelajaran_id',
         'user_id',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function video_pembelajaran()
+    {
+        return $this->belongsTo(VideoPembelajaran::class);
     }
 }

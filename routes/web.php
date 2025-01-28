@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PDFEksporter;
 use App\Livewire\HalamanDaftarVideo;
 use App\Livewire\HalamanKontenPembelajaran;
 use App\Livewire\HalamanKuisEvaluasi;
@@ -40,3 +41,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/kuis/{video_id}', HalamanKuisEvaluasi::class)->name('kuis');
 });
+
+
+Route::get('export-penilaian', [PDFEksporter::class, 'exportPenilaianPDF'])->name('export-penilaian');

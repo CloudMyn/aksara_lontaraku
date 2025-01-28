@@ -84,7 +84,8 @@ class HalamanKuisEvaluasi extends Component
 
         Evaluasi::create([
             'user_id' => auth()->user()->id,
-            'score' => $this->total_nilai
+            'score' => $this->total_nilai,
+            'video_pembelajaran_id' => $this->kuis->video_pembelajaran_id
         ]);
     }
 }
