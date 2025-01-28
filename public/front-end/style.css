@@ -1288,6 +1288,28 @@ footer .btn:hover {
 }
 
 
+
+.content-box .box-quiss button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: var(--secondary-color);
+    color: #5c5200;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.content-box .box-quiss button:hover {
+    background-color: var(--primary-color);
+    color: #3e3701;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .back-contact .cc {
     display: flex;
     flex-direction: column;

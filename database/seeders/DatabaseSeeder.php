@@ -33,7 +33,6 @@ class DatabaseSeeder extends Seeder
             'role' => 'DEVELOPER',
         ]);
 
-
         User::factory()->create([
             'name' => 'guru',
             'username' => 'guru',
@@ -41,11 +40,11 @@ class DatabaseSeeder extends Seeder
             'role' => 'GURU',
         ]);
 
-
         User::factory()->create([
             'name' => 'siswa',
             'username' => 'siswa',
             'email' => 'siswa@mail.io',
+            'kelas' => 'IV A',
             'role' => 'USER',
         ]);
 

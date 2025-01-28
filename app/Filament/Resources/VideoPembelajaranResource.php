@@ -44,19 +44,17 @@ class VideoPembelajaranResource extends Resource
 
                 Forms\Components\TextInput::make('judul')
                     ->required()
-                    ->live()
+                    ->live(onBlur: true)
                     ->afterStateUpdated(function ($set, $state) {
                         $set('slug', \Illuminate\Support\Str::slug($state));
                     })
                     ->maxLength(255),
 
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Hidden::make('slug')
+                    ->required(),
 
                 Forms\Components\TextInput::make('durasi')
                     ->required()
-                    ->columnSpanFull()
                     ->maxLength(255),
 
                 Forms\Components\RichEditor::make('deskripsi')

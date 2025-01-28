@@ -17,6 +17,9 @@ class HalamanVideoPembelajaran extends Component
     #[\Livewire\Attributes\Title('Halaman Video Pembelajaran')]
     public function render()
     {
-        return view('livewire.halaman-video-pembelajaran');
+        return view('livewire.halaman-video-pembelajaran', [
+            'kuis_count' => $this->video->kuis?->count() ?? 0,
+            // 'kuis_count' => 0,
+        ]);
     }
 }

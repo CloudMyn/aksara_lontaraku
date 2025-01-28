@@ -39,12 +39,12 @@ class EvaluasiResource extends Resource
 
     public static function canDelete(Model $record): bool
     {
-        return false;
+        return true;
     }
 
     public static function canDeleteAny(): bool
     {
-        return false;
+        return true;
     }
 
     public static function getNavigationGroup(): ?string
@@ -69,12 +69,23 @@ class EvaluasiResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label("Nama Lengkap")
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('score')
                     ->label('Nilai Kuis')
                     ->numeric()
+                    ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('user.username')
-                    ->prefix('@')
+                Tables\Columns\TextColumn::make('user.kelas')
+                    ->label('Kelas')
+                    ->searchable()
+                    ->placeholder('Tidak Ada Kelas'),
+                Tables\Columns\TextColumn::make('video_pembelajaran.judul')
+                    ->label('Video Pembelajaran')
+                    ->searchable()
+                    ->placeholder('Tidak Ada Video Pembelajaran')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat Pada')
@@ -85,7 +96,7 @@ class EvaluasiResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
