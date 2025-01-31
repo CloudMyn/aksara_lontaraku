@@ -32,6 +32,9 @@
                 </button>
             @endforeach
         </div>
+        <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 50px;">
+            <a href="{{ route('contoh-aksara') }}" class="btn-yellow">Tanda Baca Aksara Lontara & Contohnya</a>
+        </div>
     </div>
 
 

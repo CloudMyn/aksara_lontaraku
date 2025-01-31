@@ -16,11 +16,11 @@ class AksaraLontaraSeeder extends Seeder
             ['symbol' => 'ᨀ', 'description' => 'Ka'],
             ['symbol' => 'ᨁ', 'description' => 'Ga'],
             ['symbol' => 'ᨂ', 'description' => 'Nga'],
-            ['symbol' => 'ᨃ', 'description' => 'Ngka'],
+            // ['symbol' => 'ᨃ', 'description' => 'Ngka'],
             ['symbol' => 'ᨄ', 'description' => 'Pa'],
             ['symbol' => 'ᨅ', 'description' => 'Ba'],
             ['symbol' => 'ᨆ', 'description' => 'Ma'],
-            ['symbol' => 'ᨇ', 'description' => 'Mpa'],
+            // ['symbol' => 'ᨇ', 'description' => 'Mpa'],
             ['symbol' => 'ᨈ', 'description' => 'Ta'],
             ['symbol' => 'ᨉ', 'description' => 'Da'],
             ['symbol' => 'ᨊ', 'description' => 'Na'],
@@ -28,11 +28,11 @@ class AksaraLontaraSeeder extends Seeder
             ['symbol' => 'ᨌ', 'description' => 'Ca'],
             ['symbol' => 'ᨍ', 'description' => 'Ja'],
             ['symbol' => 'ᨎ', 'description' => 'Nya'],
-            ['symbol' => 'ᨏ', 'description' => 'Nyca'],
+            // ['symbol' => 'ᨏ', 'description' => 'Nyca'],
             ['symbol' => 'ᨐ', 'description' => 'Ya'],
             ['symbol' => 'ᨑ', 'description' => 'Ra'],
-            ['symbol' => 'ᨒ', 'description' => 'La'],
             ['symbol' => 'ᨓ', 'description' => 'Wa'],
+            ['symbol' => 'ᨒ', 'description' => 'La'],
             ['symbol' => 'ᨔ', 'description' => 'Sa'],
             ['symbol' => 'ᨕ', 'description' => 'A'],
             ['symbol' => 'ᨖ', 'description' => 'Ha'],
@@ -44,8 +44,10 @@ class AksaraLontaraSeeder extends Seeder
             \App\Models\AksaraLontara::create([
                 'nama_aksara' => $letter['description'],
                 'kode_aksara' => $letter['symbol'],
+                'jenis' => $letter['jenis'] ?? 'huruf',
                 'urutan' => $index++
             ]);
         }
+
     }
 }

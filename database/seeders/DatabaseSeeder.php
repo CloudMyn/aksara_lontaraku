@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Evaluasi;
 use App\Models\InformasiPembelajaran;
 use App\Models\KuisSoal;
 use App\Models\MateriPembelajaran;
@@ -69,6 +70,8 @@ class DatabaseSeeder extends Seeder
                     'video_pembelajaran_id' => $video->id
                 ]);
             }
+
+            Evaluasi::factory(50)->create();
         }
     }
 }

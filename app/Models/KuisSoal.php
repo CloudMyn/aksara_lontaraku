@@ -20,6 +20,7 @@ class KuisSoal extends Model
         'pilihan_d',
         'jawaban',
         'video_pembelajaran_id',
+        'informasi_pembelajaran_id',
     ];
 
     public function video_pembelajaran()
@@ -27,4 +28,8 @@ class KuisSoal extends Model
         return $this->belongsTo(VideoPembelajaran::class);
     }
 
+    public function informasi_pembelajaran()
+    {
+        return $this->belongsTo(InformasiPembelajaran::class);
+    }
 }

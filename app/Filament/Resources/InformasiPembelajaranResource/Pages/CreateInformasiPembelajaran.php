@@ -10,6 +10,8 @@ class CreateInformasiPembelajaran extends CreateRecord
 {
     protected static string $resource = InformasiPembelajaranResource::class;
 
+    protected static bool $canCreateAnother = false;
+
     protected function getRedirectUrl(): string
     {
         $resource = static::getResource();

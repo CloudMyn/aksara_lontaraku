@@ -16,6 +16,7 @@ class AksaraLontara extends Model
         'nama_aksara',
         'kode_aksara',
         'suara',
+        'jenis',
         'urutan',
     ];
 }

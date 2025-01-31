@@ -34,7 +34,7 @@ class AksaraLontaraResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->columns(3)
+            ->columns(2)
             ->schema([
                 Forms\Components\TextInput::make('nama_aksara')
                     ->required()
@@ -42,6 +42,12 @@ class AksaraLontaraResource extends Resource
                 Forms\Components\TextInput::make('kode_aksara')
                     ->required()
                     ->maxLength(10),
+                Forms\Components\Select::make('jenis')
+                    ->required()
+                    ->options([
+                        'huruf' => 'Huruf',
+                        'tanda_baca' => 'Tanda Baca',
+                    ]),
                 Forms\Components\TextInput::make('urutan')
                     ->required()
                     ->numeric(),
@@ -62,9 +68,15 @@ class AksaraLontaraResource extends Resource
                 Tables\Columns\TextColumn::make('kode_aksara')
                     ->fontFamily('font-lontara'),
 
+                Tables\Columns\TextColumn::make('jenis')
+                    ->searchable()
+                    ->sortable()
+                    ->badge(),
+
                 Tables\Columns\TextColumn::make('urutan')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat Pada')

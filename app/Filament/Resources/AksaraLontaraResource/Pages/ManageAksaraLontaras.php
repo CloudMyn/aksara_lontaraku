@@ -10,6 +10,8 @@ class ManageAksaraLontaras extends ManageRecords
 {
     protected static string $resource = AksaraLontaraResource::class;
 
+    protected static bool $canCreateAnother = false;
+
     protected function getHeaderActions(): array
     {
         return [

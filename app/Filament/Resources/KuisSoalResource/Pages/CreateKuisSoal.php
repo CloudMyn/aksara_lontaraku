@@ -10,6 +10,8 @@ class CreateKuisSoal extends CreateRecord
 {
     protected static string $resource = KuisSoalResource::class;
 
+    protected static bool $canCreateAnother = false;
+
     protected function getRedirectUrl(): string
     {
         $resource = static::getResource();

@@ -10,6 +10,8 @@ class CreateMateriPembelajaran extends CreateRecord
 {
     protected static string $resource = MateriPembelajaranResource::class;
 
+    protected static bool $canCreateAnother = false;
+
     protected function getRedirectUrl(): string
     {
         $resource = static::getResource();

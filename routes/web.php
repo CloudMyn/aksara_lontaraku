@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PDFEksporter;
+use App\Livewire\HalamanContohAksara;
 use App\Livewire\HalamanDaftarVideo;
 use App\Livewire\HalamanKontenPembelajaran;
 use App\Livewire\HalamanKuisEvaluasi;
@@ -30,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', HomePage::class)->name('home');
     Route::get('/tabel-aksara', HalamanTabelAksara::class)->name('tabel-aksara');
+    Route::get('/tabel-contoh-tanda-baca', HalamanContohAksara::class)->name('contoh-aksara');
 
     Route::get('/pembelajaran', HalamanPembelajaran::class)->name('pembelajaran');
     Route::get('/informasi-materi-pembelajaran/{slug}', HalamanMateriPembelajaran::class)->name('materi-pembelajaran');

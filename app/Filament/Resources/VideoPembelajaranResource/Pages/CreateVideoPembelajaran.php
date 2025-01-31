@@ -10,6 +10,8 @@ class CreateVideoPembelajaran extends CreateRecord
 {
     protected static string $resource = VideoPembelajaranResource::class;
 
+    protected static bool $canCreateAnother = false;
+
     protected function getRedirectUrl(): string
     {
         $resource = static::getResource();

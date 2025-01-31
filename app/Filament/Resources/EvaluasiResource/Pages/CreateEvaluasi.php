@@ -9,4 +9,6 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateEvaluasi extends CreateRecord
 {
     protected static string $resource = EvaluasiResource::class;
+
+    protected static bool $canCreateAnother = false;
 }

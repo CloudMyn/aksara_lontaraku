@@ -18,18 +18,30 @@
 } */
 
 :root {
-    --primary-color: #FFD700; /* Gold */
-    --secondary-color: #FFEA00; /* Bright Yellow */
-    --background-color: #fffdf7; /* Light Cream */
-    --text-color: #000; /* Black for text */
-    --dark-text-color: #5D5D5D; /* Dark Gray for better readability */
-    --light-text-color: #FFF; /* White for light text */
-    --shadow-color: rgba(0, 0, 0, 0.3); /* Softer shadow */
-    --hover-background-color: #FFEB3B; /* Hover effect for buttons */
-    --hover-text-color: #5D5D5D; /* Dark Gray for hover text */
-    --border-color: #FFC107; /* Amber for borders */
-    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow */
-    --transparent-black: rgba(0, 0, 0, 0.5); /* For overlays */
+    --primary-color: #FFD700;
+    /* Gold */
+    --secondary-color: #FFEA00;
+    /* Bright Yellow */
+    --background-color: #fffdf7;
+    /* Light Cream */
+    --text-color: #000;
+    /* Black for text */
+    --dark-text-color: #5D5D5D;
+    /* Dark Gray for better readability */
+    --light-text-color: #FFF;
+    /* White for light text */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    /* Softer shadow */
+    --hover-background-color: #FFEB3B;
+    /* Hover effect for buttons */
+    --hover-text-color: #5D5D5D;
+    /* Dark Gray for hover text */
+    --border-color: #FFC107;
+    /* Amber for borders */
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+    --transparent-black: rgba(0, 0, 0, 0.5);
+    /* For overlays */
 }
 
 * {
@@ -140,7 +152,8 @@ nav ul li a:hover {
     transition: all 1s;
 }
 
-a, button {
+a,
+button {
     float: left;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -271,12 +284,17 @@ a, button {
     cursor: pointer;
 }
 
-.user img, .user p {
+.user img,
+.user p {
     opacity: 1;
 }
 
 /*Common things in all sections*/
-#about_section, #portfolio_section, #team_section, #services_section, #contactus_section {
+#about_section,
+#portfolio_section,
+#team_section,
+#services_section,
+#contactus_section {
     font-family: 'Open Sans', sans-serif;
     color: var(--dark-text-color);
     position: relative;
@@ -300,7 +318,7 @@ a, button {
     width: 100%;
 }
 
-.extra > p {
+.extra>p {
     padding: 30px;
     padding-bottom: 150px;
     font-size: 50px;
@@ -324,10 +342,16 @@ a, button {
     margin: 1%;
     background: var(--background-color);
     box-shadow: inset 0px 0px 25px var(--box-shadow-color),
-                0 0 40px var(--box-shadow-color);
+        0 0 40px var(--box-shadow-color);
     border-radius: 10px;
     padding: 30px 50px;
     cursor: pointer;
+}
+
+
+.smbox .item-smbox.sm {
+    border-radius: 10px;
+    padding: 15px 35px;
 }
 
 .smbox .item-smbox:hover {
@@ -486,7 +510,7 @@ a, button {
 
 .totalcard .card {
     box-shadow: inset 0 0 10px var(--box-shadow-color),
-                0 0 10px var(--box-shadow-color);
+        0 0 10px var(--box-shadow-color);
 }
 
 .card:nth-child(1) {
@@ -499,12 +523,12 @@ a, button {
 
 .card:nth-child(1):hover {
     box-shadow: inset 0px 0px 10px rgba(0, 255, 0, 0.5),
-                1px 1px 30px rgba(0, 255, 0, 0.5);
+        1px 1px 30px rgba(0, 255, 0, 0.5);
 }
 
 .card:nth-child(2):hover {
     box-shadow: inset 0px 0px 10px rgba(0, 0, 255, 0.5),
-                1px 1px 30px rgba(0, 0, 255, 0.5);
+        1px 1px 30px rgba(0, 0, 255, 0.5);
 }
 
 .totalcard .card img {
@@ -599,7 +623,7 @@ a, button {
     width: 350px;
     height: 200px;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05),
-                0 0 50px rgba(0, 0, 0, 0.8);
+        0 0 50px rgba(0, 0, 0, 0.8);
     background: rgba(231, 231, 231, 0.728);
     backdrop-filter: blur(10px);
     border-radius: 5px;
@@ -838,7 +862,7 @@ form textarea {
     border-radius: 10px;
     justify-content: center;
     box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6),
-                0 0 80px rgba(0, 0, 0, 0.2);
+        0 0 80px rgba(0, 0, 0, 0.2);
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -855,7 +879,8 @@ form textarea {
     font-weight: 800;
 }
 
-.feed form input, .feed textarea {
+.feed form input,
+.feed textarea {
     padding: 15px;
     border-radius: 5px;
     box-shadow: inset 0 0 5px lightgray;
@@ -1015,7 +1040,9 @@ footer .btn:hover {
         margin-left: 30%;
     }
 
-    nav ul, .srch, .get-started {
+    nav ul,
+    .srch,
+    .get-started {
         display: none;
     }
 
@@ -1028,7 +1055,9 @@ footer .btn:hover {
         border-bottom: 1px solid #0005;
     }
 
-    .quote p, .quote h5, .play {
+    .quote p,
+    .quote h5,
+    .play {
         justify-content: center;
         text-align: center;
     }
@@ -1060,7 +1089,9 @@ footer .btn:hover {
 }
 
 @media screen and (max-width: 1000px) {
-    .feedbox form input, .feedbox form .fname {
+
+    .feedbox form input,
+    .feedbox form .fname {
         width: 100%;
     }
 }
@@ -1206,7 +1237,12 @@ footer .btn:hover {
     padding: 0 20%;
 }
 
-.box-pembelajaran h1, h2, h3, h4, h5, h6 {
+.box-pembelajaran h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     margin: 10px 0;
@@ -1237,7 +1273,8 @@ footer .btn:hover {
     justify-content: center;
 }
 
-.video-player video, .video-player iframe {
+.video-player video,
+.video-player iframe {
     min-width: 800px;
     height: 100%;
 }
@@ -1258,7 +1295,7 @@ footer .btn:hover {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     margin-bottom: 20px;
- }
+}
 
 .content-box .box-info p {
     text-align: justify;
@@ -1374,6 +1411,52 @@ footer .btn:hover {
 .score strong {
     font-size: 25px;
 }
+
 .quiss-options input[type="radio"] {
     margin-right: 5px;
 }
+
+.btn-yellow {
+    background-color: #FFD700;
+    /* Warna kuning emas */
+    border: none;
+    color: #000;
+    /* Warna teks hitam */
+    padding: 15px 30px;
+    /* Padding atas-bawah 15px, kiri-kanan 30px */
+    font-size: 14px;
+    /* Ukuran font */
+    font-weight: bold;
+    /* Tebal font */
+    border-radius: 25px;
+    /* Sudut melengkung */
+    cursor: pointer;
+    /* Pointer saat hover */
+    transition: all 0.3s ease;
+    /* Animasi transisi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Bayangan */
+    text-transform: uppercase;
+    /* Teks kapital */
+    letter-spacing: 1px;
+    /* Jarak antar huruf */
+}
+
+.btn-yellow:hover {
+    background-color: #FFC107;
+    /* Warna kuning lebih terang saat hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    /* Bayangan lebih besar saat hover */
+    transform: translateY(-2px);
+    /* Efek naik sedikit saat hover */
+}
+
+.btn-yellow:active {
+    background-color: #FFA000;
+    /* Warna kuning lebih gelap saat diklik */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih kecil saat diklik */
+    transform: translateY(0);
+    /* Kembali ke posisi awal saat diklik */
+}
+

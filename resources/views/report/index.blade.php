@@ -108,6 +108,8 @@
             text-transform: uppercase;
             font-weight: bolder;
             color: #2c243a;
+            font-size: 20px;
+            font-weight: 700;
             margin-top: 15px;
             margin-bottom: 5px;
         }

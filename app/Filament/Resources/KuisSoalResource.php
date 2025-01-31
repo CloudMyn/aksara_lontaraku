@@ -38,11 +38,16 @@ class KuisSoalResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('soal')
                     ->required()
+                    ->columnSpanFull()
                     ->maxLength(255),
 
                 Forms\Components\Select::make('video_pembelajaran_id')
                     ->required()
                     ->relationship('video_pembelajaran', 'judul'),
+
+                Forms\Components\Select::make('informasi_pembelajaran_id')
+                    ->required()
+                    ->relationship('informasi_pembelajaran', 'judul'),
 
                 Fieldset::make('Pilihan Jawaban')
                     ->schema([
@@ -59,7 +64,6 @@ class KuisSoalResource extends Resource
                         Forms\Components\TextInput::make('pilihan_d')
                             ->required()
                             ->maxLength(255),
-
                     ]),
 
                 Forms\Components\Select::make('jawaban')
@@ -71,7 +75,6 @@ class KuisSoalResource extends Resource
                         'c' => 'C',
                         'd' => 'D',
                     ]),
-
             ]);
     }
 
@@ -98,6 +101,7 @@ class KuisSoalResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
