@@ -9,14 +9,14 @@
     @if ($is_finish)
         <div class="diffSection" id="contactus_section">
             <center>
-                <p style="font-size: 50px; padding: 100px">Selamat Anda Telah Menyelesaikan Kuis 🎉🎉</p>
+                <p style="font-size: 50px; padding: 100px">Selamat {{ ucwords(auth()->user()->name) }} Telah Menyelesaikan Kuis 🎉🎉</p>
             </center>
             <div class="csec"></div>
             <div class="back-contact">
                 <div class="cc" style="width: 560px;">
                     <div style="text-align: center;">
                         <h2>Terima Kasih</h2>
-                        <p>Terima kasih karena telah mengikuti kuis. Kami berharap Anda menikmati proses belajar dan
+                        <p>Terima kasih karena telah mengikuti kuis. Kami berharap {{ ucwords(auth()->user()->name) }} menikmati proses belajar dan
                             memahami Aksara Lontara lebih dalam.</p>
 
                         <div class="score">
@@ -58,28 +58,28 @@
                             <div>
                                 <input type="radio" wire:model="jawaban" required id="a1" name="answer"
                                     value="a">
-                                <label class="label" for="a1">A ) </label>
+                                <label class="label" style="margin-right: 10px" for="a1">A ) </label>
                                 <label class="answer {{ strlen($kuis->pilihan_a) < 3 ? 'font-lontarax' : '' }}"
                                     for="a1">{{ $kuis->pilihan_a }}</label>
                             </div>
                             <div>
                                 <input type="radio" wire:model="jawaban" required id="b1" name="answer"
                                     value="b">
-                                <label class="label" for="b1">B ) </label>
+                                <label class="label" style="margin-right: 10px" for="b1">B ) </label>
                                 <label class="answer {{ strlen($kuis->pilihan_b) < 3 ? 'font-lontarax' : '' }}"
                                     for="b1">{{ $kuis->pilihan_b }}</label>
                             </div>
                             <div>
                                 <input type="radio" wire:model="jawaban" required id="c1" name="answer"
                                     value="c">
-                                <label class="label" for="c1">C ) </label>
+                                <label class="label" style="margin-right: 10px" for="c1">C ) </label>
                                 <label class="answer {{ strlen($kuis->pilihan_c) < 3 ? 'font-lontarax' : '' }}"
                                     for="c1">{{ $kuis->pilihan_c }}</label>
                             </div>
                             <div>
                                 <input type="radio" wire:model="jawaban" required id="d1" name="answer"
                                     value="d">
-                                <label class="label" for="d1">D ) </label>
+                                <label class="label" style="margin-right: 10px" for="d1">D ) </label>
                                 <label class="answer {{ strlen($kuis->pilihan_d) < 3 ? 'font-lontarax' : '' }}"
                                     for="d1">{{ $kuis->pilihan_d }}</label>
                             </div>

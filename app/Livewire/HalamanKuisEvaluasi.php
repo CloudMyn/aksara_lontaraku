@@ -82,10 +82,20 @@ class HalamanKuisEvaluasi extends Component
 
         $this->is_finish = true;
 
+        try {
+
+            Evaluasi::where('user_id', auth()->user()->id)
+                ->where('kuis_soal_id', $this->kuis->id)->delete();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
         Evaluasi::create([
             'user_id' => auth()->user()->id,
             'score' => $this->total_nilai,
-            'video_pembelajaran_id' => $this->kuis->video_pembelajaran_id
+            'video_pembelajaran_id' => $this->kuis->video_pembelajaran_id,
+            'kuis_soal_id' => $this->kuis->id,
+            'informasi_pembelajaran_id' => $this->kuis->informasi_pembelajaran_id,
         ]);
     }
 }

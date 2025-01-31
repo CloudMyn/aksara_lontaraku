@@ -90,6 +90,10 @@ class KuisSoalResource extends Resource
                 Tables\Columns\TextColumn::make('video_pembelajaran.judul')
                     ->limit(40)
                     ->sortable(),
+                Tables\Columns\TextColumn::make('informasi_pembelajaran.judul')
+                    ->limit(40)
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat Pada')
                     ->dateTime()
