@@ -7,7 +7,7 @@ use Livewire\Component;
 class HalamanTabelAksara extends Component
 {
 
-    #[\Livewire\Attributes\Title('Halaman Tabel Aksara')]
+    #[\Livewire\Attributes\Title('Tabel Aksara')]
     public function render()
     {
         $aksara_data = \App\Models\AksaraLontara::where('jenis', 'huruf')->orderBy('urutan', 'asc')->get();

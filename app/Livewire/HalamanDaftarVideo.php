@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class HalamanDaftarVideo extends Component
 {
-    #[\Livewire\Attributes\Title('Halaman Video Pembelajaran')]
+    #[\Livewire\Attributes\Title('Video Pembelajaran')]
     public function render()
     {
         $videos = \App\Models\VideoPembelajaran::orderBy('created_at', 'desc')->get();

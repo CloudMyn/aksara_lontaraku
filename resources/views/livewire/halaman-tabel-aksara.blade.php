@@ -2,7 +2,7 @@
 
     <div class="diffSection" id="portfolio_section">
         <center>
-            <p style="font-size: 47px; margin-top: 100px; padding-bottom: 10px;">Halaman Tabel Aksara</p>
+            <p style="font-size: 47px; margin-top: 100px; padding-bottom: 10px;">Tabel Aksara</p>
             <p style="padding-bottom: 50px; padding-top: 5px; font-size: 2rem;">(ᨈᨅᨒ ᨕᨀᨔᨑᨕ᨞)</p>
         </center>
         <div class="content">

@@ -14,7 +14,7 @@ class HalamanMateriPembelajaran extends Component
         $this->materi = MateriPembelajaran::where('slug', $slug)->first();
     }
 
-    #[\Livewire\Attributes\Title('Halaman Materi Pembelajaran')]
+    #[\Livewire\Attributes\Title('Materi Pembelajaran')]
     public function render()
     {
         $data['pelajaran'] = $this->materi->informasi_pembelajaran;

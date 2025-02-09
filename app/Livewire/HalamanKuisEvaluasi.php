@@ -85,7 +85,9 @@ class HalamanKuisEvaluasi extends Component
         try {
 
             Evaluasi::where('user_id', auth()->user()->id)
-                ->where('kuis_soal_id', $this->kuis->id)->delete();
+                ->where('kuis_soal_id', $this->kuis->id)
+                ->delete();
+
         } catch (\Throwable $th) {
             //throw $th;
         }
